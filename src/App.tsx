@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ComponentA from './components/a-component';
+import { UserProvider } from './components/user.context';
 
 function App() {
   return (
     <div className="App">
-      Hi
+      <UserProvider value={{username: "Jems Bond"}}>
+        <ComponentA />
+      </UserProvider>
     </div>
   );
 }
