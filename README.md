@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Lifecycle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This branch demonstrates the lifeycle of react class component.
 
-## Available Scripts
+## Category of Methods
+- Mounting
+- Updating
+- Unmounting
+- Error Handling
 
-In the project directory, you can run:
+### 1. Mounting Lifecycle Methods
+When an instance of component is being created and inserted into DOM.
 
-### `npm start`
+Sequence | Method | Use
+--- | --- | --- |
+1 | `constructor()` | When a new component object is created.
+2 | `static getDerivedStateFromProps(state, props): new-state` | When the state of the component depends on changes in props over time.
+3 | `render()` | Required. Renders the component UI.
+4 | Child Component Lifecycle | After render method, invokes the child component lifecycles.
+5 | `componentDidMount()` | Invokes immediately after the component & all its children components have been rendered to DOM.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 2. Updating Lifecycle Methods
+When a component is being re-rendered as a result of changes to either its props or states.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Sequence | Method | Use
+--- | --- | --- |
 
-### `npm test`
+### 3. Unmounting Lifecycle Methods
+when a component is being removed from the DOM.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Sequence | Method | Use
+--- | --- | --- |
 
-### `npm run build`
+### 4. Error Handling Lifecycle Method
+When there is an error handling rendering, in a lifecycle method, or in the constructor of any child component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Sequence | Method | Use
+--- | --- | --- |
