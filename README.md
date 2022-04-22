@@ -24,6 +24,13 @@ When a component is being re-rendered as a result of changes to either its props
 
 Sequence | Method | Use
 --- | --- | --- |
+1 | `static getDerivedStateFromProps(props, state): new-state` | Method is called every time a component is re-renderd.
+2 | `shouldComponentUpdate(nextProps, nextState): boolean` | Dectates if the component should re-render or not. By detauls it always returns true for normal component. For Pure Component, it compares the props & states with previous values.
+3 | `render()` | Required. Returns the JSX.
+4 | Child Component Update Lifecycle | after parent render child component Lifecycle will run till `getSnapshotBeforeUpdate()`
+5 | `getSnapshotBeforeUpdate(prevProps, prevState): null | any` | Called just before the changes from the virtual DOM are to be reflected in the DOM. Used for capturing information from DOM.
+6 | Child Component Update Lifecycle | after parent getSnapshotBeforeUpdate(), child will run `componentDidUpdate()`
+7 | `componentDidUpdate(prevProps, prevState, snapshot )` | This is the last method which will be called after the getSnapshotBeforeUpdate & child update lifecycle methods are finished. Snapshot value will be the value returned from getSnapshotBeforeUpdate().
 
 ### 3. Unmounting Lifecycle Methods
 when a component is being removed from the DOM.

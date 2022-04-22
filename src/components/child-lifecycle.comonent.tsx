@@ -1,25 +1,55 @@
 import { Component } from "react";
 
-export class ChildLifecycleComponent extends Component<any, {}>{
+export class ChildLifecycleComponent extends Component<any, {count: number}>{
     constructor(props: any) {
         super(props);
-        this.state = {};
-        console.log(`C-1. Constructor`)
+        this.state = {
+            count: 0
+        };
+        ChildLifecycleComponent.log(`Constructor`)
     }
 
     static getDerivedStateFromProps(props: any, states: any){
-        console.log(`C-2. Staic getDerivedStateFromProps`)
+        ChildLifecycleComponent.log(`Staic getDerivedStateFromProps`)
         
         // should return new state or null
         return null;
     }
 
+    shouldComponentUpdate(nextProps: any, nextState: any): boolean {
+        ChildLifecycleComponent.log(`shouldComponentUpdate`);
+        return true;
+    }
+
+    getSnapshotBeforeUpdate(prevProps: any, prevState: any) {
+        ChildLifecycleComponent.log(`getSnapshotBeforeUpdate & returning 'def'`);
+
+        // return value will be passed to the 3rd arg of componentDidUpdate
+        return "def";
+    }
+
     render(){
-        console.log(`C-3. Render`)
-        return (<></>);
+        ChildLifecycleComponent.log(`Render`)
+        return (<div>
+            <button onClick={this.counterClick}>Update child - {this.state.count}</button>
+        </div>);
+    }
+
+    counterClick = () => {
+        this.setState({
+            count: this.state.count + 1
+        });
     }
 
     componentDidMount(){
-        console.log(`C-4. comopnentDidMount`);
+        ChildLifecycleComponent.log(`comopnentDidMount`);
+    }
+
+    componentDidUpdate(prevProps: any, prevState: any, snapshot: any) {
+        ChildLifecycleComponent.log(`componentDidUpdate = ${snapshot}`)
+    }
+
+    private static log(message: string){
+        console.log(`\tC. ${message}`)
     }
 }
