@@ -37,9 +37,11 @@ when a component is being removed from the DOM.
 
 Sequence | Method | Use
 --- | --- | --- |
-
+1 | `componentWillUnmount()` |  It will be called before unmounting the component. It is used for cancelling/removing network request, event handlers, subscriptions, etc.
 ### 4. Error Handling Lifecycle Method
 When there is an error handling rendering, in a lifecycle method, or in the constructor of any child component.
 
 Sequence | Method | Use
 --- | --- | --- |
+1 | `static getDerivedStateFromError(error)` | 
+2 | `componentDidCatch(error, info)` | 
