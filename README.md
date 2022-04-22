@@ -38,10 +38,14 @@ when a component is being removed from the DOM.
 Sequence | Method | Use
 --- | --- | --- |
 1 | `componentWillUnmount()` |  It will be called before unmounting the component. It is used for cancelling/removing network request, event handlers, subscriptions, etc.
-### 4. Error Handling Lifecycle Method
-When there is an error handling rendering, in a lifecycle method, or in the constructor of any child component.
+### 4. Error Handling Lifecycle Method (Error Boundaries)
+When there is an error rendering a component, it crashes & unmount the entire component. In order to avoid that, it should be handled with Error Boundaries.
+
+- Error broundaries are React components that catch JavaScript error in their child component tree, log those errors and display a fall-back UI.
+- A class component becomes an Error Boundary by defining either or both of `getDerivedStateFromError()` and `componentDidCatch()` lifecycle methods.
+- The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI or just the component causing the problem.
 
 Sequence | Method | Use
 --- | --- | --- |
-1 | `static getDerivedStateFromError(error)` | 
-2 | `componentDidCatch(error, info)` | 
+1 | `static getDerivedStateFromError(error): new-state` | Used to render the fallback UI after the error is thrown.
+2 | `componentDidCatch(error, info)` | Used to log the error information. 
