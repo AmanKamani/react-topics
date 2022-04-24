@@ -77,3 +77,7 @@ It allows to directly access the DOM Node into the functional component.
 
 > `Other Usecase:`
 useRef can also be used as a value holder(except DOM value). So, that it can be used even after component re-renders. For more details see `2-useRefAsValueHolder.tsx`
+
+
+### 8. Custom:
+Hooks are just a reusable code extracted into a function. So, we can also create the custom hooks.

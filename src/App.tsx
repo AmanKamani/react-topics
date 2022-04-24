@@ -8,6 +8,7 @@ import UseReducerHook from './hooks/useReducerHook/useReducerHook';
 import UseCallbackHook from './hooks/useCallbackHook/5-useCallbackHook';
 import UseMemoHook from './hooks/useMemoHook/6-useMemoHook';
 import UseRefHook from './hooks/useRefHook/useRefHook';
+import CustomHooks from './hooks/customHooks/customHooks';
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
 
       {/* <UseMemoHook /> */}
 
-      <UseRefHook />
+      {/* <UseRefHook /> */}
+
+      <CustomHooks />
     </div>
   );
 }
