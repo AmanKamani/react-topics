@@ -47,3 +47,12 @@ Scenario | useState | useReducer
 `Business Logic` | No | Complex business logic (Ex: Data transformation)
 `Scope` | for Local State Management| for Global State Management
 
+## 5. useCallback:
+To optimize the re-render in functional component we use `React.memo` higher order function. Now, sometimes we pass a function as a props to other component. At that time `memo` can't  identify that function didn't change. So, every time when some state gets change the other components also gets re-render.
+
+`useCallback` returns a memoized version of the callback function that only changes if one of the related dependency has changed. This helps React.memo to optimize the functions.
+
+- It takes 2 arguments: 
+    1. function: to execute
+    2. state: to watch for
+- It returns a function

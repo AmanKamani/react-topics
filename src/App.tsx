@@ -5,6 +5,7 @@ import UseStateHook from './hooks/useStateHook/UseStateHook';
 import UseEffectHook from './hooks/useEffectHook/useEffectHook';
 import UseContextHook from './hooks/useContextHook/UseContextHook';
 import UseReducerHook from './hooks/useReducerHook/useReducerHook';
+import UseCallbackHook from './hooks/useCallbackHook/5-useCallbackHook';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
 
       {/* <UseContextHook /> */}
 
-      <UseReducerHook />
+      {/* <UseReducerHook /> */}
+
+      <UseCallbackHook />
     </div>
   );
 }
