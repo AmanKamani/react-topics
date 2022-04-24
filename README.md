@@ -25,3 +25,25 @@ It allows to perform the `side effects` like: subscribing-unsubscribing, timers,
 ### 3. useContext:
 It is used for passing data through the component tree without having to pass down manually at every level.
 - It takes context object as an argument. and returns the value set by the context provider.
+
+### 4. useReducer:
+It is used for state management. And alternative to useState.
+> `useState` is built using `useReducer`
+
+- It takes 2 arguments:
+    1. reducer-function: A function which takes 2 argument (currentState, action) & returns new state.
+    2. initialState
+- It returns array with 2 elements:
+    1. state
+    2. dispatch method
+
+#### useState v/s useReducer
+
+Scenario | useState | useReducer
+---| ---| ---|
+`No. of State` | One-Two | Too many
+`Type of State` | premitive types | complex types (Ex: Object/Class/Array)
+`Related States` | should not use | should use this (Ex: loading, error, response)
+`Business Logic` | No | Complex business logic (Ex: Data transformation)
+`Scope` | for Local State Management| for Global State Management
+

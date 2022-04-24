@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 70%;
+    text-align: -webkit-auto;
+}
+
+pre{
+    line-height: 0.8;
+}

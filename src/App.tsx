@@ -4,6 +4,7 @@ import './App.css';
 import UseStateHook from './hooks/useStateHook/UseStateHook';
 import UseEffectHook from './hooks/useEffectHook/useEffectHook';
 import UseContextHook from './hooks/useContextHook/UseContextHook';
+import UseReducerHook from './hooks/useReducerHook/useReducerHook';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       
       {/* <UseEffectHook /> */}
 
-      <UseContextHook />
+      {/* <UseContextHook /> */}
+
+      <UseReducerHook />
     </div>
   );
 }
