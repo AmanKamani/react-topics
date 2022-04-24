@@ -7,6 +7,7 @@ import UseContextHook from './hooks/useContextHook/UseContextHook';
 import UseReducerHook from './hooks/useReducerHook/useReducerHook';
 import UseCallbackHook from './hooks/useCallbackHook/5-useCallbackHook';
 import UseMemoHook from './hooks/useMemoHook/6-useMemoHook';
+import UseRefHook from './hooks/useRefHook/useRefHook';
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
 
       {/* <UseCallbackHook /> */}
 
-      <UseMemoHook />
+      {/* <UseMemoHook /> */}
+
+      <UseRefHook />
     </div>
   );
 }

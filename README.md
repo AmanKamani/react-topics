@@ -70,3 +70,10 @@ Only difference between them is:
     1. function: to execute
     2. state: to watch for
 - It returns a any type value
+
+
+### 7. useRef:
+It allows to directly access the DOM Node into the functional component.
+
+> `Other Usecase:`
+useRef can also be used as a value holder(except DOM value). So, that it can be used even after component re-renders. For more details see `2-useRefAsValueHolder.tsx`
