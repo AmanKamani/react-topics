@@ -11,10 +11,10 @@ Hooks is a feature, which allows to easily use react features without having to 
 
 ## Types of Hooks
 
-#### 1. useState: 
+### 1. useState: 
 Creates a state & returns an array of state variable & setter function of the state.
 
-#### 2. useEffect:
+### 2. useEffect:
 It allows to perform the `side effects` like: subscribing-unsubscribing, timers,
 - It is a replacement of `componentDidMount`, `componentDidUpdate` & `componentWillUnmount`.
 - It takes 2 argument:
@@ -22,3 +22,6 @@ It allows to perform the `side effects` like: subscribing-unsubscribing, timers,
     2. array of state (optional): useEffect will watch for the given states, if it changes then only it executes the function. If the array is empty, then function will get executed only once(for the first time).
 - It returns a function. Which automatically runs on the component unmount.
  
+### 3. useContext:
+It is used for passing data through the component tree without having to pass down manually at every level.
+- It takes context object as an argument. and returns the value set by the context provider.
