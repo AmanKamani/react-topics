@@ -24,6 +24,13 @@ Package | Usage
 [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit) | It is built on top of `redux`. And easy to implement. Recommended to use instead `redux`.
 [redux-thunk](https://www.npmjs.com/package/redux-thunk) | It is a middleware & used as for Async actions.
 
+### Other Packages:
+Pakckage | Usage
+---| ---|
+[redux-logger](https://www.npmjs.com/package/redux-logger) | A middleware package, to log the state & dispatched events in the browser console.
+[@types/redux-logger](https://www.npmjs.com/package/@types/redux-logger) | Typescript version of redux-logger.  
+[@redux-devtools/extension](https://www.npmjs.com/package/@redux-devtools/extension) | A dev tool which works with [redux extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+
 ## Ways to Implement Redux in React
 
 ### 1. Without Hooks:
