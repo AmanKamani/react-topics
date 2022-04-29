@@ -4,6 +4,7 @@ import CakeContainer from './components/CakeContainer';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import HooksCakeContainer from './components/HooksCakeContainer';
+import Usercontainer from './components/Usercontainer';
 
 const App: React.FC<{}> = () => {
   return (
@@ -11,7 +12,11 @@ const App: React.FC<{}> = () => {
       <Provider store={store}>
         <CakeContainer />
         <hr />
+
         <HooksCakeContainer />
+        <hr />
+
+        <Usercontainer />
       </Provider>
     </div>
   );
