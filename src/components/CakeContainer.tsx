@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { ActionTypes } from '../redux/cake/ActionTypes'
@@ -13,10 +13,13 @@ interface CakeContainerProps{
 
 const CakeContainer: React.FC<CakeContainerProps> = ({numOfCakes,buyOneCake}) => {
 
+  const [num, setNum] = useState(1);
+
   return (<>
     <h4>Without Hooks CakeContainer</h4>
+    <input type="number" min={1} value={num} onChange={e => setNum(+e.target.value)}/> 
     <p>Number of Cakes: </p><h4>{numOfCakes}</h4>
-    <button onClick={buyOneCake}>Buy Cake</button>
+    <button onClick={() => buyOneCake(num)}>Buy Cake</button>
 </>)
 }
 
@@ -28,7 +31,7 @@ const mapStateToProps = (state: AppState, ownProps: CakeContainerProps) => {
 
 const mapDispatchToProps = (dispatch: Dispatch<{type: ActionTypes.BUY_CAKE}>) => {
   return {
-    buyOneCake: () => dispatch(buyCake())
+    buyOneCake: (cakesToBuy: number = 1) => dispatch(buyCake(cakesToBuy))
   };
 }
 

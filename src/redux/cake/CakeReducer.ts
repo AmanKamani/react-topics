@@ -13,7 +13,7 @@ export const cakeReducer = (state: CakeState = initialState, action: CakeActions
         case ActionTypes.BUY_CAKE:
             return {
                 ...state,
-                numOfCakes: state.numOfCakes - 1
+                numOfCakes: state.numOfCakes - action.payload
             };
         default:
             return state;
