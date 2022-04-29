@@ -30,4 +30,9 @@ Package | Usage
 > check the `CakeContainer.tsx` component.
 
 ### 2. With Hooks:
+> check the `HooksCakeContainer.tsx` component.
 
+Hook | Usage
+---| ---|
+`useSelector` | It takes state as argument & returns the entire/part of state.
+`useDispatch` | It returns the reference to the dispatch method. Using that reference any action can be called.

@@ -10,7 +10,8 @@ const App: React.FC<{}> = () => {
     <div className="App">
       <Provider store={store}>
         <CakeContainer />
-        
+        <hr />
+        <HooksCakeContainer />
       </Provider>
     </div>
   );
