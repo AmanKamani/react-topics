@@ -1,5 +1,7 @@
 # React Redux
 
+> For more details of new **reduxjs/toolkit examples**: [Click Here](https://github.com/AmanKamani/react-topics/tree/14.1.React-ReduxJsToolKit)
+
 ## Redux
 Redux is a `predictable` `state container` for `JavaScript applications`. 
 
