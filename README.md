@@ -2,7 +2,7 @@
 
 Hooks is a feature, which allows to easily use react features without having to write a class. Like: state.
 
-> Hooks `can't` be used inside `Class Components`.
+> Hooks **can't** be used inside **Class Components**.
 
 ## Why Hooks?
 - `this` keyword works very different within javascript class compare to other language.
@@ -28,7 +28,7 @@ It is used for passing data through the component tree without having to pass do
 
 ### 4. useReducer:
 It is used for state management. And alternative to useState.
-> `useState` is built using `useReducer`
+> **useState** is built using **useReducer**
 
 - It takes 2 arguments:
     1. reducer-function: A function which takes 2 argument (currentState, action) & returns new state.
@@ -57,14 +57,14 @@ To optimize the re-render in functional component we use `React.memo` higher ord
     2. state: to watch for
 - It returns a function
 
-> useCallback `caches` the entire `function`.
+> useCallback **caches** the entire **function**.
 
 
 ### 6. useMemo:
 useMemo has the similar implementation to useCallback.
 Only difference between them is:
 
-> useMemo `caches` the `function result`.
+> useMemo **caches** the **function result**.
 
 - It takes 2 arguments: 
     1. function: to execute
@@ -76,8 +76,25 @@ Only difference between them is:
 It allows to directly access the DOM Node into the functional component.
 
 > `Other Usecase:`
-useRef can also be used as a value holder(except DOM value). So, that it can be used even after component re-renders. For more details see `2-useRefAsValueHolder.tsx`
+useRef can also be used as a value holder(except DOM value). So, that it can be used even after component re-renders. For more details see **2-useRefAsValueHolder.tsx**
 
 
-### 8. Custom:
+### 8. useSelector (For Redux):
+useSelector allows to access the state from redux store.
+- It takes state as argument & returns the entire/part of state.
+
+> For Examples: 
+[14.ReactRedux](https://github.com/AmanKamani/react-topics/tree/14.ReactRedux), 
+[14.1.React-ReduxJsToolKit](https://github.com/AmanKamani/react-topics/tree/14.1.React-ReduxJsToolKit)
+
+### 9. useDispatch (For Redux): 
+It returns the reference to the dispatch method. Using that reference any action can be called.
+
+
+> For Examples: 
+[14.ReactRedux](https://github.com/AmanKamani/react-topics/tree/14.ReactRedux), 
+[14.1.React-ReduxJsToolKit](https://github.com/AmanKamani/react-topics/tree/14.1.React-ReduxJsToolKit)
+
+
+### 10. Custom:
 Hooks are just a reusable code extracted into a function. So, we can also create the custom hooks.
