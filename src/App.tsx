@@ -4,6 +4,7 @@ import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import CounterComponent from './components/CounterComponent';
+import UserListComponent from './components/UserListComponent';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <CounterComponent />
         <hr />
 
+        <UserListComponent />
+        <hr />
       </Provider>
     </div>
   );
