@@ -1,0 +1,26 @@
+div.header {
+    text-align: initial;
+    background-color: seashell;
+}
+
+.header a:hover{
+    background-color: sandybrown;
+    color: white;
+}
+
+/*
+    Commented CSS has given inline.
+*/
+
+/* .header a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-weight: 600;
+} */
+
+/* .active {
+    background-color: orangered;
+    color: white !important;
+} */
