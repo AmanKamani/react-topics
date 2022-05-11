@@ -1,0 +1,30 @@
+.container{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    text-align: initial;
+}
+
+.searchbar{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: medium;
+}
+
+.tabContainer{
+    text-align: initial;
+    margin-top: 15px;
+    background-color: lightcyan;
+    border-bottom: 1px solid darkcyan;
+}
+
+.childTabs{
+    font-size: medium;
+    color: black;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+}

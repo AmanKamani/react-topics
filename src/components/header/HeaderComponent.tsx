@@ -23,6 +23,7 @@ function HeaderComponent() {
         }
         <NavLink style={styleNavLink} to="/">Home</NavLink>
         <NavLink style={styleNavLink} to="/about">About</NavLink>
+        <NavLink style={styleNavLink} to="/products">Products</NavLink>
     </div>)
 }
 
