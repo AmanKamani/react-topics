@@ -1,0 +1,43 @@
+.product-details{
+    position: absolute;
+    top: 40px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 1em;
+}
+
+#price{
+    color: green;
+    margin-top: 15px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#description{
+    margin-top: 10px;
+}
+
+#image{
+    width: 15%;
+}
+
+#cancel, #buy{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+#cancel:hover, #buy:hover{
+    cursor: pointer;
+ }
+
+#cancel{
+    background-color: tomato;
+}
+#buy{
+    margin-left: 20px;
+    background-color: darkcyan;
+}

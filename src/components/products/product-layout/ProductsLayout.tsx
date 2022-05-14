@@ -1,9 +1,14 @@
 import {Product} from "../../../services/models/Product";
 import "./productLayout.css";
+import {useNavigate} from "react-router-dom";
 
 const ProductsLayout = (props: { products: Product[] }) => {
-
+    const navigate = useNavigate();
     const {products} = props;
+
+    const navigateProductDetail = (id: number) => {
+        navigate(`/products/${id}`)
+    }
 
     const getProductCard = (product: Product) => {
         const {name, id, imageUrl, description, price} = product
@@ -13,7 +18,7 @@ const ProductsLayout = (props: { products: Product[] }) => {
             <p className='description'>{description.length > 100 ? `${description.slice(0, 90)}...` : description}</p>
             <div className='footer'>
                 <span className='price'>{price} $</span>
-                <button className='buy'>Buy Now</button>
+                <button className='buy' onClick={() => navigateProductDetail(id)}>Buy Now</button>
             </div>
         </div>)
     }

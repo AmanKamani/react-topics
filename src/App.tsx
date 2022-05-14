@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import HomeComponent from './components/HomeComponent';
 import HeaderComponent from './components/header/HeaderComponent';
 import AboutComponent from './components/AboutComponent';
@@ -9,11 +8,11 @@ import PageNotFoundComponent from './components/pagenotfound/PageNotFoundCompone
 import ProductComponent from './components/products/ProductComponent';
 import NewProductsComponent from './components/products/new/NewProductsComponent';
 import FeaturedProductsComponent from './components/products/featured/FeaturedProductsComponent';
+import ProductDetail from "./components/products/product-details/ProductDetail";
 
 function App() {
   return (<div className="App">
       <HeaderComponent />
-
       {
         routes()
       }
@@ -28,6 +27,7 @@ const routes = () => {
       <Route index element={<FeaturedProductsComponent />}  />
       <Route path='featured' element={<FeaturedProductsComponent />} />
       <Route path='new' element={<NewProductsComponent />} />
+      <Route path=':productId' element={<ProductDetail />} />
     </Route>
     <Route path='*' element={<PageNotFoundComponent />} />
   </Routes>

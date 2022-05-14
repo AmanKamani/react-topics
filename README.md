@@ -22,6 +22,8 @@
 
 ## react-router-dom Hooks
 
-Hook| Usage
----| ---|
-`useNavigate()` | Helps to navigate programmatically. <br/>And returns a function. That function takes 2 args:<br/> [ to, options ]
+| Hook            | Usage                                                                                                             |
+|-----------------|-------------------------------------------------------------------------------------------------------------------|
+| `useNavigate()` | Helps to navigate programmatically. <br/>And returns a function. That function takes 2 args:<br/> [ to, options ] |
+| `useParams()`   | To get the value of dynamic route params. <br /> It returns params object with key,value.                         |
+| `useLocation()` | To get the details of current path like: pathname, state, ...                                                     |
