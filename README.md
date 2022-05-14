@@ -18,7 +18,8 @@
 - Define routes within `<Routes></Routes>` & use `<Route />` to configure the routes with elements.
 - Use `<Link />` or `<NavLink />` for interactive navigation.
 > Unlike `<Link />`, `<NavLink />` by default adds `active` class to the selected route. And also contains `isActive property` as `props`.
-- use `<Outlet />` to load the child/sub rouets in parent component.
+- Use `<Outlet />` to load the child/sub rouets in parent component.
+- Use `<React.Suspense fallback={<></>}/>` to perform lazy loading. Use `React.lazy()` to create lazy component.
 
 ## react-router-dom Hooks
 
