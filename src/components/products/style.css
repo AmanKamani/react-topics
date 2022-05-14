@@ -20,11 +20,26 @@
     border-bottom: 1px solid darkcyan;
 }
 
+.childTabs, .sortBy{
+    padding: 10px;
+}
+
 .childTabs{
     font-size: medium;
     color: black;
     font-weight: 600;
     display: inline-block;
-    padding: 10px;
     text-decoration: none;
+}
+
+.sortBy{
+    float: right;
+    display: inline-block;
+}
+.sortBy select{
+    margin: 0 5px;
+    background-color: aquamarine;
+    border-radius: 5px;
+    border: none;
+    padding: 1px 3px;
 }

@@ -1,6 +1,36 @@
 import {Product} from "./models/Product";
+import {ProductSortBy} from "../components/products/types";
 
-export const products = [
+export class ProductsArray extends Array<Product>{
+
+    public filterBy(condition: (value: Product, index: number, products: Product[]) => boolean): ProductsArray{
+        return this.filter(condition) as ProductsArray;
+    }
+
+    public sortBy(sort: string): ProductsArray{
+        const { NONE, NAME, PRICE } = ProductSortBy;
+        let func: (a: Product, b: Product) => number;
+
+        switch (sort) {
+            case NONE: {
+                func = (a: Product, b: Product) => a.id - b.id
+                break;
+            }
+            case PRICE: {
+                func = (a: Product, b: Product) => a.price - b.price
+                break;
+            }
+            case NAME.valueOf(): {
+                func = (a: Product, b) => a.name.localeCompare(b.name)
+                break;
+            }
+        }
+        return this.sort(func!);
+    }
+
+}
+
+export const products: ProductsArray = new ProductsArray(
     new Product(1,
         "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
         109.95,
@@ -152,4 +182,4 @@ export const products = [
         true,
         false
     )
-]
+);
