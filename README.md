@@ -27,5 +27,5 @@
 |---------------------|------------------------------------------------------------------------------------------------------------------------|
 | `useNavigate()`     | Helps to navigate programmatically. <br/>And returns a function. That function takes 2 args:<br/> [ to, options ]      |
 | `useParams()`       | To get the value of dynamic route params. <br /> It returns params object with key,value.                              |
-| `useLocation()`     | To get the details of current path like: pathname, search(query params), ...                                           |
+| `useLocation()`     | To get the details of current path like: pathname, search(query params), state, ...                                    |
 | `useSearchParams()` | Helps to append the query params. <br />It returns array of 2 values: Object of query params, method to setQueryParams |

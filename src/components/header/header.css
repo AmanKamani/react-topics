@@ -8,6 +8,11 @@ div.header {
     color: white;
 }
 
+#profile-link{
+    float: right;
+    margin-right: 10px;
+}
+
 /*
     Commented CSS has given inline.
 */
