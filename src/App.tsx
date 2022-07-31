@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
-import FormikHookForm from "./components/FormikHook/1.FormikHookForm";
+import FormikHookYupForm from "./components/FormikHook/2.FormikHookYupForm";
 
 function App() {
   return (
     <div className="App">
         <div id="container">
-            <FormikHookForm/>
+            {/*<FormikHookForm/>*/}
+
+            <FormikHookYupForm/>
         </div>
     </div>
   );

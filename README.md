@@ -8,11 +8,12 @@
 
 **An argument** of object containing:
 
-| Key            | Description                                                                        |
-|----------------|------------------------------------------------------------------------------------|
-| `initialState` | The object of element name and its default value                                   |
-| `onSubmit`     | A method, which takes the form values as argument                                  |
-| `validate`     | A method, takes argument of values & returns object of errors with name attributes | 
+| Key                | Description                                                                                                                  |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------|
+| `initialState`     | The object of element name and its default value                                                                             |
+| `onSubmit`         | A method, which takes the form values as argument                                                                            |
+| `validate`         | A method, takes argument of values & returns object of errors with name attributes                                           |
+| `validationSchema` | It is used with [Yup](https://www.npmjs.com/package/yup) library. This library is useful to easily create validation schemas |
 
 **Returns** a formik object containing:
 
@@ -40,6 +41,8 @@
 3. Validate Form & Show Error
     - Implement validate method in useFormik argument object
     - validate method will return error object containing field names. Ex: { name: "Required" }
+    - Optional: Instead validate method, can also use validationSchema with [Yup](https://www.npmjs.com/package/yup)
+      library
     - Initialize formik handleBlur to HTML onBlur attribute
     - Check for field touched & formik error object to show/hide the error
  
