@@ -25,12 +25,21 @@ button{
   margin-top: 20px;
   font-size: 16px;
 }
-.error{
+.error {
   text-align: left;
   color: red;
   margin-top: 0;
 }
 
-form > div{
+form > div {
   margin-top: 20px;
+}
+
+.singleline {
+  display: flex;
+  align-items: center;
+}
+
+.singleline button {
+  margin-top: 0;
 }

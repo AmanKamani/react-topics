@@ -40,9 +40,25 @@
    - Initialize formik handleSubmit handler to Form onSubmit attribute
 
 3. Validate Form & Show Error
-    - Implement validate method in useFormik argument object
-    - validate method will return error object containing field names. Ex: { name: "Required" }
-    - Optional: Instead validate method, can also use validationSchema with [Yup](https://www.npmjs.com/package/yup)
-      library
-    - Initialize formik handleBlur to HTML onBlur attribute
-    - Check for field touched & formik error object to show/hide the error
+   - Implement validate method in useFormik argument object
+   - validate method will return error object containing field names. Ex: { name: "Required" }
+   - Optional: Instead validate method, can also use validationSchema with [Yup](https://www.npmjs.com/package/yup)
+     library
+   - Initialize formik handleBlur to HTML onBlur attribute
+   - Check for field touched & formik error object to show/hide the error
+
+## Formik Components
+
+| Component    | Description                                                                                                                                                                                                     |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Formik       | Wrap Form component with Formik. Specify initialeValues, onSubmit, etc.. as props                                                                                                                               |
+| Form         | Use Form element instead form HTML element                                                                                                                                                                      |
+| Field        | Use Field element instead input/textarea element. Can specify input & textarea's own attributes along with other props. Can also specify custom input element as children.                                      |
+| ErrorMessage | Use to display the error message. It will only display error if field is touched and there is error for that field.<br /> By default it doesn't wrap error message in HTML element<br /> Can also customize it. |
+| FieldArray   | Use to create the dynamic fields                                                                                                                                                                                |
+
+## Other Features
+
+- Supports nested objects
+- Supports array of values
+- Supports dynamic fields
