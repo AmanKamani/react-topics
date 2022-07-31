@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# React Formik
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Formik](https://formik.org/) is a library to easily create, manage & scale forms in react.
 
-## Available Scripts
+> Formik works with the `name` attribute of HTML elements.
 
-In the project directory, you can run:
+## useFormik Hook
 
-### `npm start`
+**An argument** of object containing:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Key            | Description                                                                        |
+|----------------|------------------------------------------------------------------------------------|
+| `initialState` | The object of element name and its default value                                   |
+| `onSubmit`     | A method, which takes the form values as argument                                  |
+| `validate`     | A method, takes argument of values & returns object of errors with name attributes | 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Returns** a formik object containing:
 
-### `npm test`
+| Key            | Description                                                                                                                                                           |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `values`       | Contains the values of form elements                                                                                                                                  |
+| `handleChange` | Event handler to keep track of value change                                                                                                                           |
+| `handleSubmit` | Event handler for Form Submit                                                                                                                                         |
+| `handleBlur`   | Event handler for onBlur                                                                                                                                              |
+| `errors`       | An object return by validate method                                                                                                                                   |
+| `touched`      | Whether user has touched the element or not.<br/> It returns an object with field names. <br />  `To use "touched", onBlur should be initialized with the handleBlur` |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Steps to Manage Form:
 
-### `npm run build`
+1. Manage Form State
+    - Create formik hook with initialValues object method
+    - Initialize formik value to the HTML value attribute
+    - Initialize formik handleChange handler to HTML onChange attribute
+      > If onChange is not provided then it will be readonly element
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Form Submission
+   - Implement onSubmit method in formik hook argument object
+   - Initialize formik handleSubmit handler to Form onSubmit attribute
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Validate Form & Show Error
+    - Implement validate method in useFormik argument object
+    - validate method will return error object containing field names. Ex: { name: "Required" }
+    - Initialize formik handleBlur to HTML onBlur attribute
+    - Check for field touched & formik error object to show/hide the error
+ 

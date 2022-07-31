@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import FormikHookForm from "./components/FormikHook/1.FormikHookForm";
 
 function App() {
   return (
     <div className="App">
-      Hi
+        <div id="container">
+            <FormikHookForm/>
+        </div>
     </div>
   );
 }

@@ -1,3 +1,36 @@
 .App {
   text-align: center;
 }
+
+#container{
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label{
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px;
+}
+
+input, textarea{
+  width: 100%;
+  font-size: 18px;
+  padding: 5px;
+}
+
+button{
+  margin-top: 20px;
+  font-size: 16px;
+}
+.error{
+  text-align: left;
+  color: red;
+  margin-top: 0;
+}
+
+form > div{
+  margin-top: 20px;
+}
