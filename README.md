@@ -17,14 +17,15 @@
 
 **Returns** a formik object containing:
 
-| Key            | Description                                                                                                                                                           |
-|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `values`       | Contains the values of form elements                                                                                                                                  |
-| `handleChange` | Event handler to keep track of value change                                                                                                                           |
-| `handleSubmit` | Event handler for Form Submit                                                                                                                                         |
-| `handleBlur`   | Event handler for onBlur                                                                                                                                              |
-| `errors`       | An object return by validate method                                                                                                                                   |
-| `touched`      | Whether user has touched the element or not.<br/> It returns an object with field names. <br />  `To use "touched", onBlur should be initialized with the handleBlur` |
+| Key             | Description                                                                                                                                                                   |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `values`        | Contains the values of form elements                                                                                                                                          |
+| `handleChange`  | Event handler to keep track of value change                                                                                                                                   |
+| `handleSubmit`  | Event handler for Form Submit                                                                                                                                                 |
+| `handleBlur`    | Event handler for onBlur                                                                                                                                                      |
+| `errors`        | An object return by validate method                                                                                                                                           |
+| `touched`       | Whether user has touched the element or not.<br/> It returns an object with field names. <br />  `To use "touched", onBlur should be initialized with the handleBlur`         |
+| `getFieldProps` | A method which takes field name as argument & return an object containing filed (name, onChange, onBlur, value).<br /> It is used to reduce the boilerplate for HTML Element. |
 
 ### Steps to Manage Form:
 
@@ -45,4 +46,3 @@
       library
     - Initialize formik handleBlur to HTML onBlur attribute
     - Check for field touched & formik error object to show/hide the error
- 

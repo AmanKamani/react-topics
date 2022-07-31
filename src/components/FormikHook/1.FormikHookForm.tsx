@@ -53,11 +53,8 @@ const FormikHookForm = () => {
             <label htmlFor="email">Email</label>
             <input
                 type="text"
-                name="email"
                 id="email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                {...formik.getFieldProps('email')}
             />
             { formik.touched.email && formik.errors.email &&
                 <p className="error">{formik.errors.email}</p>

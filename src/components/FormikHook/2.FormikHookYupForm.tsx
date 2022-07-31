@@ -31,11 +31,8 @@ const FormikHookYupForm = () => {
         <div>
             <label htmlFor="name">Name</label>
             <input type="text"
-                   name="name"
                    id="name"
-                   value={formik.values.name}
-                   onChange={formik.handleChange}
-                   onBlur={formik.handleBlur}
+                   {...formik.getFieldProps('name')}
             />
             {formik.touched.name && formik.errors.name &&
                 <p className="error">{formik.errors.name}</p>
@@ -59,13 +56,10 @@ const FormikHookYupForm = () => {
 
         <div>
             <label htmlFor="address">Address</label>
-            <textarea name="address"
-                      id="address"
+            <textarea id="address"
                       rows={5}
                       cols={20}
-                      value={formik.values.address}
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      {...formik.getFieldProps('address')}
             />
             {formik.touched.address && formik.errors.address &&
                 <p className="error">{formik.errors.address}</p>
